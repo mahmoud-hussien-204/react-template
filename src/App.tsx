@@ -1,6 +1,10 @@
-import { Button } from "@/components/ui/button"
+import { useState } from "react"
+import { Button } from "./shared/components/ui/button"
 
 export function App() {
+  const [count, setCount] = useState(0)
+  console.log("render")
+
   return (
     <div className="flex min-h-svh p-6">
       <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
@@ -8,8 +12,12 @@ export function App() {
           <h1 className="font-medium">Project ready!</h1>
           <p>You may now add components and start building.</p>
           <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
+          <Button className="mt-2" onClick={() => setCount((prev) => prev + 1)}>
+            Button
+          </Button>
+          <p className="text-lg font-bold">{count}</p>
         </div>
+        <Comp />
         <div className="font-mono text-xs text-muted-foreground">
           (Press <kbd>d</kbd> to toggle dark mode)
         </div>
@@ -19,3 +27,8 @@ export function App() {
 }
 
 export default App
+
+const Comp = () => {
+  console.log("render comp")
+  return <div>Comp</div>
+}
