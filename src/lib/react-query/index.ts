@@ -4,16 +4,17 @@ import {
   QueryClient,
   type QueryKey,
 } from "@tanstack/react-query"
+import { handleError, handleSuccess } from "./utils"
 
-interface IBaseMeta {
+export interface IBaseMeta {
   errorMessage?: string
   successMessage?: string
   showToast?: boolean
 }
 
-type IQueryMeta = IBaseMeta
+export type IQueryMeta = IBaseMeta
 
-interface IMutationMeta extends IBaseMeta {
+export interface IMutationMeta extends IBaseMeta {
   invalidateQueries?: QueryKey[]
 }
 
@@ -35,25 +36,16 @@ export const queryClient = new QueryClient({
   },
   queryCache: new QueryCache({
     onError: (error, query) => {
-      handleApiError(error, query.meta)
+      handleError(error, query.meta)
     },
   }),
 
   mutationCache: new MutationCache({
     onError: (error, _variables, _context, mutation) => {
-      handleApiError(error, mutation.meta)
+      handleError(error, mutation.meta)
+    },
+    onSuccess: (data, _variables, _context, mutation) => {
+      handleSuccess(data as IApiResponse, mutation.meta)
     },
   }),
 })
-
-function handleApiError(error: IApiError, meta?: IBaseMeta) {
-  if (error.status === 401) {
-    return
-  }
-
-  const shouldShowToast = meta?.showToast ?? true
-
-  if (shouldShowToast) {
-    // toast.error(meta?.errorMessage ?? error.message)
-  }
-}
