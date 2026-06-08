@@ -12,3 +12,7 @@ interface IApiResponseMeta {
   currentPage: number
   totalPages: number
 }
+
+type ITheme = "light" | "dark" | "system"
+
+type IResolvedTheme = "light" | "dark"

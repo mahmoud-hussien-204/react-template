@@ -55,12 +55,21 @@ react-template
 ├─ src
 │  ├─ App.tsx
 │  ├─ app
+│  │  ├─ constants
+│  │  │  └─ index.ts
 │  │  ├─ router
+│  │  │  └─ index.ts
 │  │  ├─ store
+│  │  │  └─ index.ts
 │  │  └─ styles
 │  │     └─ index.css
 │  ├─ assets
 │  │  └─ react.svg
+│  ├─ i18n
+│  │  ├─ index.ts
+│  │  └─ locales
+│  │     ├─ ar.json
+│  │     └─ en.json
 │  ├─ interfaces
 │  │  └─ index.d.ts
 │  ├─ lib
@@ -76,12 +85,23 @@ react-template
 │  ├─ modules
 │  │  ├─ admin
 │  │  │  └─ routes.ts
+│  │  ├─ auth
+│  │  │  └─ utils
+│  │  │     ├─ index.ts
+│  │  │     └─ token.ts
 │  │  ├─ common
 │  │  │  └─ routes.ts
 │  │  └─ user
 │  │     └─ routes.ts
 │  └─ shared
 │     ├─ components
+│     │  ├─ animation
+│     │  │  └─ page-animation.tsx
+│     │  ├─ layouts
+│     │  │  ├─ access-denied-layout.tsx
+│     │  │  ├─ app-layout.tsx
+│     │  │  ├─ error-layout.tsx
+│     │  │  └─ not-found-layout.tsx
 │     │  ├─ providers
 │     │  │  └─ theme-provider.tsx
 │     │  └─ ui
