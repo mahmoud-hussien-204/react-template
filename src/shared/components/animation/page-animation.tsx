@@ -3,11 +3,11 @@ import { motion, type HTMLMotionProps, type Variants } from "framer-motion"
 const pageVariants: Variants = {
   initial: {
     opacity: 0,
-    y: 20,
+    // x: 20,
   },
   enter: {
     opacity: 1,
-    y: 0,
+    // x: 0,
     transition: {
       duration: 0.5,
       ease: "easeOut",
@@ -15,7 +15,7 @@ const pageVariants: Variants = {
   },
   exit: {
     opacity: 0,
-    y: -20,
+    // x: -20,
     transition: {
       duration: 0.3,
       ease: "easeIn",

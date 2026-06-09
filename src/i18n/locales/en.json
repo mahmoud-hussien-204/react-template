@@ -1,1 +1,9 @@
-{}
+{
+  "common": {
+    "notFound": {
+      "title": "Sorry, we couldn't find this page.",
+      "description": " But don't worry, you can find plenty of other things on our home page.",
+      "goHome": " Go Home"
+    }
+  }
+}
