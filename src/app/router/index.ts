@@ -1,4 +1,5 @@
 import SplashScreen from "@/shared/components/other/splash-screen"
+import { ErrorLayoutRoute } from "@/shared/layouts/error-layout"
 import { createBrowserRouter } from "react-router"
 
 export const routes = createBrowserRouter([
@@ -9,6 +10,7 @@ export const routes = createBrowserRouter([
       Component: (await import("@/shared/layouts/root-layout")).default,
     }),
     HydrateFallback: SplashScreen,
+    ErrorBoundary: ErrorLayoutRoute,
     children: [
       {
         path: "",

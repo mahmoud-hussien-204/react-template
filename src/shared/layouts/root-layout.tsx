@@ -1,9 +1,12 @@
 import { Outlet } from "react-router"
+import OfflineLayout from "./offline-layout"
 
 const RootLayout = () => {
   return (
     <main>
-      <Outlet />
+      <OfflineLayout>
+        <Outlet />
+      </OfflineLayout>
     </main>
   )
 }

@@ -1,6 +1,6 @@
 import { ReplyIcon } from "lucide-react"
 import AnimatedPage from "../components/animation/page-animation"
-import NotFoundIcon from "../components/icons/not-found"
+import NotFoundIcon from "../components/icons/not-found-icon"
 import { ButtonLink } from "../components/ui/button-link"
 import Container from "../components/other/container"
 import { Trans } from "react-i18next"
@@ -16,7 +16,7 @@ const NotFoundLayout = () => {
             <h6 className="mb-1 text-xl">
               <Trans i18nKey="common.notFound.title" />
             </h6>
-            <p className="text-lg text-muted-foreground">
+            <p className="max-w-lg text-lg text-muted-foreground">
               <Trans i18nKey="common.notFound.description" />
             </p>
             <ButtonLink to="/" className="mt-6">

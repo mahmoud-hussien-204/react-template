@@ -2,8 +2,22 @@
   "common": {
     "notFound": {
       "title": "Sorry, we couldn't find this page.",
-      "description": " But don't worry, you can find plenty of other things on our home page.",
-      "goHome": " Go Home"
+      "description": "But don't worry, you can find plenty of other things on our home page.",
+      "goHome": "Go Home"
+    },
+    "accessDenied": {
+      "title": "Oops! You Can’t Access This",
+      "description": "Looks like you don’t have permission to view this. Double-check your access or reach out for help.",
+      "goHome": "Go Home"
+    },
+    "error": {
+      "title": "Oops! Something Went Wrong",
+      "description": "Looks like you don’t have permission to view this. Double-check your access or reach out for help.",
+      "reload": "Refresh"
+    },
+    "network": {
+      "title": "You're Offline",
+      "description": "It looks like you’re not connected to the internet. Check your Wi-Fi or mobile data and try again once you're back online."
     }
   }
 }
