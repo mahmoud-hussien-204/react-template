@@ -58,13 +58,16 @@ react-template
 │  │  ├─ constants
 │  │  │  └─ index.ts
 │  │  ├─ router
+│  │  │  ├─ guards
+│  │  │  │  └─ index.ts
 │  │  │  └─ index.ts
 │  │  ├─ store
 │  │  │  └─ index.ts
 │  │  └─ styles
 │  │     └─ index.css
 │  ├─ assets
-│  │  └─ react.svg
+│  ├─ data
+│  │  └─ nav.ts
 │  ├─ i18n
 │  │  ├─ index.ts
 │  │  └─ locales
@@ -79,6 +82,7 @@ react-template
 │  │  ├─ react-query
 │  │  │  ├─ index.ts
 │  │  │  └─ utils.ts
+│  │  ├─ storage.ts
 │  │  ├─ toaster.ts
 │  │  └─ utils.ts
 │  ├─ main.tsx
@@ -86,6 +90,8 @@ react-template
 │  │  ├─ admin
 │  │  │  └─ routes.ts
 │  │  ├─ auth
+│  │  │  ├─ layout
+│  │  │  │  └─ index.tsx
 │  │  │  └─ utils
 │  │  │     ├─ index.ts
 │  │  │     └─ token.ts
@@ -97,17 +103,40 @@ react-template
 │     ├─ components
 │     │  ├─ animation
 │     │  │  └─ page-animation.tsx
-│     │  ├─ layouts
-│     │  │  ├─ access-denied-layout.tsx
-│     │  │  ├─ app-layout.tsx
-│     │  │  ├─ error-layout.tsx
-│     │  │  └─ not-found-layout.tsx
+│     │  ├─ app-breadcrumb.tsx
+│     │  ├─ app-logo.tsx
+│     │  ├─ app-sidebar.tsx
+│     │  ├─ icons
+│     │  │  ├─ access-denied-icon.tsx
+│     │  │  ├─ error-icon.tsx
+│     │  │  ├─ not-found-icon.tsx
+│     │  │  └─ offline-icon.tsx
+│     │  ├─ other
+│     │  │  ├─ container.tsx
+│     │  │  └─ splash-screen.tsx
 │     │  ├─ providers
 │     │  │  └─ theme-provider.tsx
 │     │  └─ ui
+│     │     ├─ breadcrumb.tsx
+│     │     ├─ button-link.tsx
 │     │     ├─ button.tsx
-│     │     └─ sonner.tsx
-│     └─ hooks
+│     │     ├─ input.tsx
+│     │     ├─ separator.tsx
+│     │     ├─ sheet.tsx
+│     │     ├─ sidebar.tsx
+│     │     ├─ skeleton.tsx
+│     │     ├─ sonner.tsx
+│     │     └─ tooltip.tsx
+│     ├─ hooks
+│     │  ├─ use-mobile.ts
+│     │  └─ use-network-status.ts
+│     └─ layouts
+│        ├─ access-denied-layout.tsx
+│        ├─ app-layout.tsx
+│        ├─ error-layout.tsx
+│        ├─ not-found-layout.tsx
+│        ├─ offline-layout.tsx
+│        └─ root-layout.tsx
 ├─ tsconfig.app.json
 ├─ tsconfig.json
 ├─ tsconfig.node.json

@@ -1,6 +1,7 @@
 import SplashScreen from "@/shared/components/other/splash-screen"
 import { ErrorLayoutRoute } from "@/shared/layouts/error-layout"
 import { createBrowserRouter } from "react-router"
+import { appLoader, authLoader, rootLoader } from "./guards"
 
 export const routes = createBrowserRouter([
   // app routes
@@ -11,6 +12,7 @@ export const routes = createBrowserRouter([
     }),
     HydrateFallback: SplashScreen,
     ErrorBoundary: ErrorLayoutRoute,
+    loader: rootLoader,
     children: [
       {
         path: "",
@@ -18,6 +20,7 @@ export const routes = createBrowserRouter([
           Component: (await import("@/shared/layouts/app-layout")).default,
         }),
         children: [],
+        loader: appLoader,
       },
 
       // auth routes
@@ -26,17 +29,18 @@ export const routes = createBrowserRouter([
         lazy: async () => ({
           Component: (await import("@/modules/auth/layout")).default,
         }),
-      },
-
-      // access denied route
-      {
-        path: "access-denied",
-        lazy: async () => ({
-          Component: (await import("@/shared/layouts/access-denied-layout"))
-            .default,
-        }),
+        loader: authLoader,
       },
     ],
+  },
+
+  // access denied route
+  {
+    path: "access-denied",
+    lazy: async () => ({
+      Component: (await import("@/shared/layouts/access-denied-layout"))
+        .default,
+    }),
   },
 
   // not found route

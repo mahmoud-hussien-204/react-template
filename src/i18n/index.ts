@@ -49,3 +49,7 @@ function getLocalStorageLanguage() {
   const storedLanguage = localStorage.getItem("i18nextLng")
   return storedLanguage
 }
+
+export function getLanguage() {
+  return i18n.language as ILocale
+}

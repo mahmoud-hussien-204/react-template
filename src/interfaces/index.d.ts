@@ -16,3 +16,5 @@ interface IApiResponseMeta {
 type ITheme = "light" | "dark" | "system"
 
 type IResolvedTheme = "light" | "dark"
+
+type ILocale = "en" | "ar"

@@ -1,4 +1,10 @@
 {
+  "nav": {
+    "dashboard": "Dashboard",
+    "users": "Users",
+    "wizard": "Wizard",
+    "settings": "Settings"
+  },
   "common": {
     "notFound": {
       "title": "Sorry, we couldn't find this page.",
