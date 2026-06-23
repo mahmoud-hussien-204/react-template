@@ -6,12 +6,12 @@ function showToast(showToast: boolean | undefined) {
 }
 
 export function handleError(error: IApiError, meta?: IBaseMeta) {
-  if (error.status === 401) return
+  if (error.status === 401) return (location.pathname = "/auth/login")
 
   const shouldShowToast = showToast(meta?.showToast)
 
   if (shouldShowToast) {
-    const msg = (meta?.errorMessage ?? error.message) || "An error occurred"
+    const msg = meta?.errorMessage ?? error.message
     toaster.error(msg)
   }
 }

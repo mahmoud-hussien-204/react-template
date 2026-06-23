@@ -25,5 +25,10 @@
       "title": "You're Offline",
       "description": "It looks like you’re not connected to the internet. Check your Wi-Fi or mobile data and try again once you're back online."
     }
+  },
+  "auth": {
+    "title": "Fast, Efficient and Productive",
+    "description": "Build your application with the best development tools and frameworks. Get started for free.",
+    "loginPageTitle": "Login"
   }
 }

@@ -18,7 +18,7 @@ function getServerSnapshot() {
   return true
 }
 
-export function useNetworkStatus() {
+export const useNetworkStatus = () => {
   const isOnline = useSyncExternalStore(
     subscribe,
     getSnapshot,

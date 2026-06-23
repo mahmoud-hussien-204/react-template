@@ -4,6 +4,7 @@ import { storage } from "@/lib/storage"
 import { redirect } from "react-router"
 
 export async function rootLoader() {
+  console.log("root loader")
   try {
     const token = storage.token.get()
     if (!token) return null
@@ -16,6 +17,7 @@ export async function rootLoader() {
 }
 
 export async function authLoader() {
+  console.log("auth loader")
   const user = queryClient.getQueryData(QUERIES.me.queryKey)
   if (user) {
     throw redirect("/")
@@ -24,6 +26,7 @@ export async function authLoader() {
 }
 
 export async function appLoader() {
+  console.log("app loader")
   const user = queryClient.getQueryData(QUERIES.me.queryKey)
   if (!user) {
     throw redirect("/auth/login")

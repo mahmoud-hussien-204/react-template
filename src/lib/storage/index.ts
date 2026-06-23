@@ -15,4 +15,5 @@ const token = {
 
 export const storage = {
   token,
+  clear: () => localStorage.clear(),
 }

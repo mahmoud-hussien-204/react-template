@@ -28,20 +28,23 @@ i18n
       caches: ["localStorage"],
     },
   })
+  .then(() => {
+    applyLanguageOnDom(i18n.language as ILocale)
+  })
 
 export default i18n
 
-function onInit(lng: string) {
-  console.log("run i18n")
+i18n.on("languageChanged", (lng) => {
+  applyLanguageOnDom(lng as ILocale)
+})
 
-  const isArabic = lng === "ar"
-  document.documentElement.lang = lng
+function applyLanguageOnDom(lang: ILocale) {
+  const isArabic = lang === "ar"
+  document.documentElement.lang = lang
   document.documentElement.dir = isArabic ? "rtl" : "ltr"
 }
 
-onInit(i18n.language)
-
-export function changeLanguage(lang: "ar" | "en") {
+export function changeLanguage(lang: ILocale) {
   i18n.changeLanguage(lang)
 }
 

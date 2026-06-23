@@ -16,6 +16,8 @@
   --color-sidebar-primary: var(--sidebar-primary);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar: var(--sidebar);
+  --color-auth-layout: var(--auth-layout);
+  --color-auth-layout-foreground: var(--auth-layout-foreground);
   --color-chart-5: var(--chart-5);
   --color-chart-4: var(--chart-4);
   --color-chart-3: var(--chart-3);
@@ -39,6 +41,10 @@
   --color-card: var(--card);
   --color-foreground: var(--foreground);
   --color-background: var(--background);
+  --color-Text-T-200: var(--Text-T-200);
+  --color-Text-T-300: var(--Text-T-300);
+  --color-Text-T-400: var(--Text-T-400);
+  --color-Text-T-500: var(--Text-T-500);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -65,7 +71,8 @@
   --accent-foreground: oklch(0.21 0.006 285.885);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
+  --input: oklch(0.967 0.001 286.375);
+  --input-border: oklch(0.92 0.004 286.32);
   --ring: oklch(0.705 0.015 286.067);
   --chart-1: oklch(0.828 0.111 230.318);
   --chart-2: oklch(0.685 0.169 237.323);
@@ -81,6 +88,12 @@
   --sidebar-accent-foreground: oklch(0.977 0.013 236.62);
   --sidebar-border: oklch(0.39 0 0);
   --sidebar-ring: oklch(0.705 0.015 286.067);
+  --auth-layout: oklch(0.218 0.008 223.9);
+  --auth-layout-foreground: oklch(0.977 0.013 236.62);
+  --Text-T-200: oklch(79.139% 0.02587 275.808);
+  --Text-T-300: oklch(74.972% 0.02788 273.984);
+  --Text-T-400: oklch(59.556% 0.02632 275.079);
+  --Text-T-500: oklch(47.404% 0.02448 276.487);
 }
 
 .dark {
@@ -101,6 +114,7 @@
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
+  --input-border: oklch(0.92 0.004 286.32);
   --ring: oklch(0.552 0.016 285.938);
   --chart-1: oklch(0.828 0.111 230.318);
   --chart-2: oklch(0.685 0.169 237.323);
@@ -115,6 +129,12 @@
   --sidebar-accent-foreground: oklch(0.977 0.013 236.62);
   --sidebar-border: oklch(0.92 0.004 286.32);
   --sidebar-ring: oklch(0.705 0.015 286.067);
+  --auth-layout: oklch(0.218 0.008 223.9);
+  --auth-layout-foreground: oklch(0.977 0.013 236.62);
+  --Text-T-200: oklch(79.139% 0.02587 275.808);
+  --Text-T-300: oklch(74.972% 0.02788 273.984);
+  --Text-T-400: oklch(59.556% 0.02632 275.079);
+  --Text-T-500: oklch(47.404% 0.02448 276.487);
 }
 
 @layer base {

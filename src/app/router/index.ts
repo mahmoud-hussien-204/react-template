@@ -1,7 +1,8 @@
 import SplashScreen from "@/shared/components/other/splash-screen"
 import { ErrorLayoutRoute } from "@/shared/layouts/error-layout"
 import { createBrowserRouter } from "react-router"
-import { appLoader, authLoader, rootLoader } from "./guards"
+import { appLoader, rootLoader } from "./guards"
+import { authRoutes } from "@/modules/auth/routes"
 
 export const routes = createBrowserRouter([
   // app routes
@@ -24,13 +25,7 @@ export const routes = createBrowserRouter([
       },
 
       // auth routes
-      {
-        path: "auth",
-        lazy: async () => ({
-          Component: (await import("@/modules/auth/layout")).default,
-        }),
-        loader: authLoader,
-      },
+      ...authRoutes,
     ],
   },
 
