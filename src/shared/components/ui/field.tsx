@@ -4,6 +4,7 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 import { Label } from "@/shared/components/ui/label"
 import { Separator } from "@/shared/components/ui/separator"
+import { Trans } from "react-i18next"
 
 function FieldSet({ className, ...props }: React.ComponentProps<"fieldset">) {
   return (
@@ -193,14 +194,18 @@ function FieldError({
     ]
 
     if (uniqueErrors?.length == 1) {
-      return uniqueErrors[0]?.message
+      return <Trans i18nKey={uniqueErrors[0]?.message} />
     }
 
     return (
       <ul className="ms-4 flex list-disc flex-col gap-1">
         {uniqueErrors.map(
           (error, index) =>
-            error?.message && <li key={index}>{error.message}</li>
+            error?.message && (
+              <li key={index}>
+                <Trans i18nKey={error.message} />
+              </li>
+            )
         )}
       </ul>
     )
@@ -214,7 +219,7 @@ function FieldError({
     <div
       role="alert"
       data-slot="field-error"
-      className={cn("text-sm font-normal text-destructive", className)}
+      className={cn("-mt-1 text-xs font-normal text-destructive", className)}
       {...props}
     >
       {content}

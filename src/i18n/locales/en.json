@@ -1,4 +1,24 @@
 {
+  "fields": {
+    "labels": {
+      "email": "Email",
+      "password": "Password"
+    },
+    "placeholders": {
+      "email": "Enter your email",
+      "password": "Enter your password"
+    }
+  },
+  "validations": {
+    "email": {
+      "invalid": "Please enter a valid email",
+      "required": "Email is required"
+    },
+    "password": {
+      "required": "Password is required",
+      "doesNotMatch": "Password does not match"
+    }
+  },
   "nav": {
     "dashboard": "Dashboard",
     "users": "Users",
@@ -29,6 +49,11 @@
   "auth": {
     "title": "Fast, Efficient and Productive",
     "description": "Build your application with the best development tools and frameworks. Get started for free.",
-    "loginPageTitle": "Login"
+    "loginPageTitle": "Login",
+    "login": {
+      "title": "Welcome Back!",
+      "subtitle": "Sign in to access your dashboard with email and password",
+      "dontHaveAccount": "Don't have an account? <Link>Sign up</Link>"
+    }
   }
 }
